@@ -22,16 +22,30 @@
 
 // Exemplo de função assíncrona com await e setTimeout
 
-async function minhaFuncao() {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve("Irei pagar a pizza");
-        }, 3000);
-    });
+// async function minhaFuncao() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve("Irei pagar a pizza");
+//         }, 3000);
+//     });
+// }
+
+// async function executaFuncao() {
+//     console.log(await minhaFuncao());
+// }
+
+// executaFuncao();
+
+// Exemplo de função síncrona com setTimeout
+
+function minhaFuncao() {
+    setTimeout(() => {
+        return "Irei pagar a pizza";
+    }, 3000);
 }
 
-async function executaFuncao() {
-    console.log(await minhaFuncao());
+function executaFuncao() {
+    console.log(minhaFuncao());
 }
 
 executaFuncao();
